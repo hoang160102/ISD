@@ -6,7 +6,6 @@ function showSlides() {
     let i
     for (i = 0; i < getSlide.length; i++) {
         getSlide[i].style.display = 'none'
-        getSlide[i].style.animation = 'slideLeft 1s ease-in-out'
     }
     sliderIndex++
     if (sliderIndex > getSlide.length) {
@@ -14,4 +13,9 @@ function showSlides() {
     }
     getSlide[sliderIndex-1].style.display = 'block'
     setTimeout(showSlides, 3000)
+}
+
+let getHeader = document.querySelector('#header')
+if (getHeader.clientHeight === 0) {
+    getHeader.classList.add('fix')
 }

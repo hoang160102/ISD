@@ -11,6 +11,7 @@ body {
 
 #main {
     height: 100vh;
+    position: relative;
 }
 
 #top-page {
@@ -72,6 +73,16 @@ body {
     justify-content: center;
 }
 
+.fix {
+    position: fixed;
+    z-index: 1;
+    top: -20;
+    width: 100%;
+    left: 0;
+    min-height: inherit;
+    background-color: #fff;
+}
+
 .header-menu {
     width: 100%;
     max-width: 1200px;
@@ -80,8 +91,7 @@ body {
 }
 
 .logo {
-    max-width: 9%;
-    object-fit: cover;
+    max-width: 8%;
 }
 
 .menu {
@@ -96,8 +106,8 @@ body {
 
 .list-menu  a {
     text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: #333333;
+    font-size: 18px;
     font-weight: bolder;
 }
 
@@ -107,17 +117,14 @@ body {
 
 #slider {
     width: 100%;
-    height: 100%;
 }
 
 .slider-img {
     width: 100%;
-    object-fit: contain;
-    height: inherit;
 }
 
 #service {
-    margin: 35px 0;
+    padding: 40px 0;
 }
 
 .content {
@@ -125,15 +132,12 @@ body {
     margin: auto;
 }
 
-.service-box{
+.service-heading {
+    margin-bottom: 30px;
     text-align: center;
 }
 
-.service-heading {
-    margin-bottom: 30px;
-}
-
-.service-heading a {
+.heading a {
     font-size: 35px;
     text-decoration: none;
     color: #333333;
@@ -153,6 +157,7 @@ body {
 
 .left-content {
     transition: 0.5s;
+    position: relative;
 }
 
 .left-content:hover {
@@ -166,6 +171,22 @@ body {
 .left-content img {
     width: 100%;
     object-fit: fill;
+}
+
+.title-service {
+    position: absolute;
+    bottom: 4px;
+    padding: 15px;
+    color: #fff;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%; 
+    font-weight: 600;
+}
+
+.title-service a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .right-top-content, .right-bottom-content {
@@ -193,7 +214,7 @@ body {
     transition: 0.5s;
 }
 
-.desc a{
+.desc a {
     text-decoration: none;
     color: #333333;
     font-weight: 600;
@@ -203,6 +224,62 @@ body {
 
 .desc a:hover {
     color: #d82726;
+}
+
+#news {
+    margin: 30px 0;
+}
+
+#footer {
+    background: #EEB422;
+    font-size: 14px;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    color: #2d2c2c;
+    border-bottom: solid 1px #c69311;
+    padding: 40px 0;
+}
+
+.contact-box {
+    width: 31%;
+}
+
+.address {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.line-footer {
+    background-color: #818181;
+    height: 3px;
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.box-info {
+    line-height: 20px;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    line-height: 46px;
+}
+
+.social > .fa {
+    color: #fff;
+    line-height: 31px;
+    background-color: #959595;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
 }
 
 @keyframes slideLeft {
