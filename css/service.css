@@ -71,7 +71,6 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    height: 100px;
 }
 
 .sticky {
@@ -89,14 +88,15 @@ body {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .logo {
-    max-width: 10%;
+    max-width: 8%;
 }
 
 .menu {
+    list-style-type: none;
     display: flex;
     align-items: center;
 }
@@ -105,7 +105,7 @@ body {
     padding: 0 12px;
 }
 
-.list-menu a {
+.list-menu  a {
     text-decoration: none;
     color: #333333;
     font-size: 18px;
@@ -116,20 +116,14 @@ body {
     color: #d82726;
 }
 
-.icon {
-    display: none;
-}
-
 #slider {
     width: 100%;
+    height: 100%;
 }
 
 .slider-img {
     width: 100%;
-}
-
-#service {
-    padding: 40px 0;
+    height: inherit;
 }
 
 .content {
@@ -137,102 +131,96 @@ body {
     margin: auto;
 }
 
-.service-heading {
+.smallNav {
+    display: flex;
     margin-bottom: 30px;
-    text-align: center;
+    line-height: 30px;
 }
 
-.heading a {
-    font-size: 35px;
-    text-decoration: none;
-    color: #333333;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: 0.2s ease-in-out;
+.margin {
+    margin-right: 10px;
+    font-size: 15px;
+    color: #58595b;
 }
 
-.service-heading a:hover {
-    color: #d82726;
+.smallNav > span:hover {
+    cursor: pointer;
 }
 
-.service-content {
-    display: flex;
-    justify-content: space-between;
+.service-box {
+    width: 70%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
 }
 
-.left-content {
-    transition: 0.5s;
-    position: relative;
+.service-heading {
+    font-size: 30px;
+    color: #393939;
+    margin-bottom: 20px;
 }
 
-.left-content:hover {
-    scale: 1.1;
-}
-
-.left-content, .right-content {
-    width: 45%;
-}
-
-.left-content img {
-    width: 100%;
-    object-fit: fill;
-}
-
-.title-service {
-    position: absolute;
-    bottom: 4px;
-    padding: 15px;
-    color: #fff;
-    font-size: 23px;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%; 
-    font-weight: 600;
-}
-
-.title-service a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.right-top-content, .right-bottom-content {
-    width: 100%;
+.service {
     display: flex;
 }
 
-.right-top-content {
-    margin-bottom: 21px;
+.service a {
+    width: 40%;
 }
 
-
-.img-box {
-    width: 50%;
-    display: block;
-    margin-right: 20px;
-}
-
-.img-box img:hover {
-    scale: 1.1;
-}
-
-.img-box img {
+.service a img {
     width: 100%;
-    transition: 0.5s;
 }
 
-.desc a {
+.top-service-desc {
+    margin-left: 25px;
+}
+
+.top-service-desc a {
     text-decoration: none;
-    color: #333333;
-    font-weight: 600;
+    color: #404040;
+    font-weight: bold;
     font-size: 20px;
+}
+
+.rest-service {
+    width: 70%;
+}
+
+.rest-service-box {
+    margin-bottom: 30px;
+}
+
+.rest-service-box > a {
+    width: 30%;
+    display: block;
+}
+
+.rest-service-box a img {
+    width: 100%;
+}
+
+.rest-service-desc {
+    margin-left: 25px;
+}
+
+.desc {
+    text-decoration: none;
+    color: #393939;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.scale {
     transition: 0.3s;
 }
 
-.desc a:hover {
-    color: #d82726;
+.scale:hover {
+    scale: 1.1;
 }
 
-#news {
-    margin: 30px 0;
+.hover:hover {
+    color: #d82726;
 }
 
 #footer {
@@ -285,48 +273,4 @@ body {
     width: 33px;
     height: 33px;
     text-align: center;
-}
-
-
-
-/* @media screen and (max-width: 600px) {
-    .menu .list-menu {
-        display: none;
-    }
-
-    .icon {
-        float: right;
-        display: block;
-    }
-
-    .menu.res {
-        position: relative;
-    }
-
-    .menu.res .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .icon .fa {
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .menu.res .list-menu {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-} */
-
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
 }

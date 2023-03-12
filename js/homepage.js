@@ -1,4 +1,3 @@
-
 let sliderIndex = 0
 let getSlide = document.getElementsByClassName('slider-img')
 showSlides()
@@ -15,7 +14,26 @@ function showSlides() {
     setTimeout(showSlides, 3000)
 }
 
+window.onscroll = function() {
+    stickyNavbar()
+}
 let getHeader = document.querySelector('#header')
-if (getHeader.clientHeight === 0) {
-    getHeader.classList.add('fix')
+let stick = getHeader.offsetTop
+function stickyNavbar() {
+    if (window.pageYOffset >=stick) {
+        getHeader.classList.add("sticky")
+    }
+    else {
+        getHeader.classList.remove("sticky")
+    }
+}
+
+function resBar() {
+    let x = document.querySelector("#navBar");
+    if (x.className === "menu") {
+        x.className += " res";
+    } 
+    else {
+        x.className = "menu";
+    }
 }
