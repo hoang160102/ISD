@@ -20,40 +20,43 @@
         <div id="name">CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG VÀ DỊCH VỤ LÀM SẠCH HOÀN HẢO</div>
         <div id="header">
             <div class="header-menu">
-                <img class="logo" src="./img/logo.png" alt="">
-                <ul class="menu">
-                    <li class="list-menu">
+                <img class="logo" src="./img/logo.jpg" alt="">
+                <div class="menu">
+                    <div class="list-menu">
                         <a href="./homepage.html">
                             <span>Trang chủ</span>
                         </a>
-                    </li>
-                    <li class="list-menu">
+                    </div>
+                    <div class="list-menu">
                         <a href="">
                             <span>Giới thiệu</span>
                         </a>
-                    </li>
-                    <li class="list-menu">
+                    </div>
+                    <div class="list-menu">
                         <a href="./service.html">
                             <span>Dịch vụ</span>
                             <i class="fa fa-angle-down"></i>
                         </a>
-                    </li>
-                    <li class="list-menu">
+                    </div>
+                    <div class="list-menu">
                         <a href="./news.html">
                             <span>Tin tức</span>
                         </a>
-                    </li>
-                    <li class="list-menu">
+                    </div>
+                    <div class="list-menu">
                         <a href="">
                             <span>Tuyển dụng</span>
                         </a>
-                    </li>
-                    <li class="list-menu">
+                    </div>
+                    <div class="list-menu">
                         <a href="#footer">
                             <span>Liên hệ</span>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div onclick="displayTopNav()" class="icon">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
         </div>
         <div id="slider">
@@ -160,20 +163,6 @@
             </div>
         </div>
     </div>
-    <script>
-        window.onscroll = function() {
-            stickyNavbar()
-        }
-        let getHeader = document.querySelector('#header')
-        let stick = getHeader.offsetTop
-        function stickyNavbar() {
-            if (window.pageYOffset >=stick) {
-                getHeader.classList.add("sticky")
-            }
-            else {
-                getHeader.classList.remove("sticky")
-            }
-        }
-    </script>
+    <script src="./js/news.js"></script>
 </body>
 </html>

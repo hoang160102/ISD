@@ -62,21 +62,22 @@ body {
 #name {
     text-align: center;
     background:#EEB422;
-    padding: 40px 0;
+    padding: 20px 0;
     color: #fff;
-    font-size: 30px;
+    font-size: 27px;
+    font-weight: bolder;
 }
 
 #header {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
+    height: 100px;
 }
 
 .sticky {
     position: fixed;
     z-index: 1;
-    top: -20px;
+    top: 0;
     width: 100%;
     left: 0;
     min-height: inherit;
@@ -88,11 +89,14 @@ body {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .logo {
-    max-width: 8%;
+    width: 12%;
+    object-fit: contain;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .menu {
@@ -114,6 +118,14 @@ body {
 
 .list-menu a:hover {
     color: #d82726;
+}
+
+.icon {
+    display: none;
+}
+
+.icon .fa {
+    font-size: 40px;
 }
 
 #slider {
@@ -273,4 +285,72 @@ body {
     width: 33px;
     height: 33px;
     text-align: center;
+}
+
+@media (max-width:1000px) {
+    .header-menu {
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .res-menu {
+        display: block;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        background-color: rgba(225, 0, 0, 0.7);
+    }
+
+    .list-menu {
+        padding: 10px 0;
+        border-bottom: 1px solid #e46762;
+        cursor: pointer;
+    }
+
+    .list-menu:hover a {
+        color: #f6ed55;
+    }
+
+    .list-menu a {
+        width: 100%;
+        display: block;
+    }
+
+    .list-menu a span {
+        font-weight: lighter;
+        font-size: 16px;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        cursor: pointer;
+    }
+
+    .service-content {
+        display: block;
+    }
+
+    .left-content  {
+        width: 100%;
+        margin-bottom: 21px;
+        display: block;
+    }
+
+    .left-content:hover {
+        scale: 1.0
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .img-box {
+        width: 30%;
+    }
 }
